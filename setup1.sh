@@ -46,7 +46,7 @@ echo "2. Choose Your Own Domain"
 read -rp "Input 1 or 2: " dns
 if [ "$dns" -eq 1 ]; then
     # Download cf script and convert line endings
-    wget https://codeberg.org/babayega/vpsscript/raw/branch/main/ssh/cf
+    wget https://raw.githubusercontent.com/noelrubio143/hot/refs/heads/main/ssh/cf
     dos2unix cf
     bash cf
 elif [ "$dns" -eq 2 ]; then
@@ -63,15 +63,19 @@ else
 fi
 
 # Install services
-wget -q https://codeberg.org/babayega/vpsscript/raw/branch/main/ssh/ssh-vpn.sh
+wget -q https://raw.githubusercontent.com/noelrubio143/hot/refs/heads/main/ssh/ssh-vpn.sh
 dos2unix ssh-vpn.sh
 bash ssh-vpn.sh
 
-wget -q https://codeberg.org/babayega/vpsscript/raw/branch/main/xray/ins-xray.sh
+wget -q https://raw.githubusercontent.com/noelrubio143/hot/refs/heads/main/xray/ins-xray.sh
 dos2unix ins-xray.sh
 bash ins-xray.sh
 
-wget -q https://codeberg.org/babayega/vpsscript/raw/branch/main/sshws/insshws.sh
+wget -q https://raw.githubusercontent.com/noelrubio143/hot/refs/heads/main/sshws/insshws.sh
+dos2unix insshws.sh
+bash insshws.sh
+
+wget -q https://raw.githubusercontent.com/noelrubio143/hot/refs/heads/main/slip/insshws.sh
 dos2unix insshws.sh
 bash insshws.sh
 
