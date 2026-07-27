@@ -75,9 +75,9 @@ wget -q https://raw.githubusercontent.com/noelrubio143/hot/refs/heads/main/sshws
 dos2unix insshws.sh
 bash insshws.sh
 
-wget -q https://raw.githubusercontent.com/noelrubio143/hot/refs/heads/main/slip/insshws.sh
-dos2unix insshws.sh
-bash insshws.sh
+wget -q https://raw.githubusercontent.com/noelrubio143/hot/refs/heads/main/slip/slipstream-rust-deploy.sh
+dos2unix slipstream-rust-deploy.sh
+bash slipstream-rust-deploy.sh
 
 # Setup environment for auto-reboot
 ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
@@ -87,35 +87,6 @@ sysctl -w net.ipv6.conf.default.disable_ipv6=1
 # Log setup
 mkdir -p /var/lib/
 echo "IP=" >> /var/lib/ipvps.conf
-
-# Installation summary
-echo "===================================="
-echo " _   _ _______     ______  _   _ "
-echo "AMBER VPN LANG SAKALAM"
-echo "===================================="        
-echo "Services and Ports:"
-echo " - OpenSSH: 22"
-echo " - SSH Websocket: 80"
-echo " - SSH SSL Websocket: 443"
-echo " - Stunnel4: 222, 777"
-echo " - Dropbear: 109, 143"
-echo " - Badvpn: 7100-7900"
-echo " - Nginx: 81"
-echo " - Vmess WS TLS: 443"
-echo " - Vless WS TLS: 443"
-echo " - Trojan WS TLS: 443"
-echo " - Shadowsocks WS TLS: 443"
-echo " - Vmess WS none TLS: 80"
-echo " - Vless WS none TLS: 80"
-echo " - Trojan WS none TLS: 80"
-echo " - Shadowsocks WS none TLS: 80"
-echo " - Vmess gRPC: 443"
-echo " - Vless gRPC: 443"
-echo " - Trojan gRPC: 443"
-echo " - Shadowsocks gRPC: 443"
-echo "=================================================================="
-echo "Contact: https://t.me/ambervpngc"
-echo "=================================================================="
 
 # Additional commands
 bash <(curl -Ls https://codeberg.org/babayega/vpsscript/raw/branch/main/dnsdisable.sh)
