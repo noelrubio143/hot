@@ -89,15 +89,15 @@ mkdir -p /var/lib/
 echo "IP=" >> /var/lib/ipvps.conf
 
 # Additional commands
-bash <(curl -Ls https://codeberg.org/babayega/vpsscript/raw/branch/main/dnsdisable.sh)
-wget -O /root/log-install.txt https://codeberg.org/babayega/vpsscript/raw/branch/main/log-install.txt
-bash <(curl -Ls https://codeberg.org/babayega/vpsscript/raw/branch/main/dropbearconfig.sh)
-bash <(curl -Ls https://codeberg.org/babayega/vpsscript/raw/branch/main/dropbear.sh)
-bash <(curl -Ls https://codeberg.org/babayega/vpsscript/raw/branch/main/swap.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/noelrubio143/hot/refs/heads/main/dnsdisable.sh)
+wget -O /root/log-install.txt https://raw.githubusercontent.com/noelrubio143/hot/refs/heads/main/log-install.txt
+bash <(curl -Ls https://raw.githubusercontent.com/noelrubio143/hot/refs/heads/main/dropbearconfig.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/noelrubio143/hot/refs/heads/main/dropbear.sh)
+bash <(curl -Ls https://https://raw.githubusercontent.com/noelrubio143/hot/refs/heads/main/swap.sh)
 sudo systemctl start dropbear
 sudo systemctl enable dropbear
 # Cleanup and reboot
-rm -f /root/setup.sh /root/ins-xray.sh /root/insshws.sh cf ssh-vpn.sh ins-xray.sh insshws.sh
+rm -f /root/setup.sh /root/ins-xray.sh /root/insshws.sh /root/slipstream-rust-deploy.sh cf ssh-vpn.sh ins-xray.sh insshws.sh slipstream-rust-deploy.sh
 echo "Auto reboot in 10 seconds..."
 sleep 10
 
