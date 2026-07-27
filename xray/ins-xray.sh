@@ -475,16 +475,16 @@ systemctl restart runn
 
 cd /usr/bin/
 # vmess
-wget -O add-ws "https://codeberg.org/babayega/vpsscript/raw/branch/main/xray/add-ws.sh" && chmod +x add-ws
-wget -O del-ws "https://codeberg.org/babayega/vpsscript/raw/branch/main/xray/del-ws.sh" && chmod +x del-ws
+wget -O add-ws "https://raw.githubusercontent.com/noelrubio143/hot/refs/heads/main/xray/add-ws.sh" && chmod +x add-ws
+wget -O del-ws "https://raw.githubusercontent.com/noelrubio143/hot/refs/heads/main/xray/del-ws.sh" && chmod +x del-ws
 
 # vless
-wget -O add-vless "https://codeberg.org/babayega/vpsscript/raw/branch/main/xray/add-vless.sh" && chmod +x add-vless
-wget -O del-vless "https://codeberg.org/babayega/vpsscript/raw/branch/main/xray/del-vless.sh" && chmod +x del-vless
+wget -O add-vless "https://raw.githubusercontent.com/noelrubio143/hot/refs/heads/main/xray/add-vless.sh" && chmod +x add-vless
+wget -O del-vless "https://raw.githubusercontent.com/noelrubio143/hot/refs/heads/main/xray/del-vless.sh" && chmod +x del-vless
 
 # trojan
-wget -O add-tr "https://codeberg.org/babayega/vpsscript/raw/branch/main/xray/add-tr.sh" && chmod +x add-tr
-wget -O del-tr "https://codeberg.org/babayega/vpsscript/raw/branch/main/xray/del-tr.sh" && chmod +x del-tr
+wget -O add-tr "https://raw.githubusercontent.com/noelrubio143/hot/refs/heads/main/xray/add-tr.sh" && chmod +x add-tr
+wget -O del-tr "https://raw.githubusercontent.com/noelrubio143/hot/refs/heads/main/xray/del-tr.sh" && chmod +x del-tr
 
 
 sleep 0.5
