@@ -423,18 +423,6 @@ sed -i '$ iproxy_set_header Connection "upgrade";' /etc/nginx/conf.d/xray.conf
 sed -i '$ iproxy_set_header Host \$http_host;' /etc/nginx/conf.d/xray.conf
 sed -i '$ i}' /etc/nginx/conf.d/xray.conf
 
-sed -i '$ ilocation = /ss-ws' /etc/nginx/conf.d/xray.conf
-sed -i '$ i{' /etc/nginx/conf.d/xray.conf
-sed -i '$ iproxy_redirect off;' /etc/nginx/conf.d/xray.conf
-sed -i '$ iproxy_pass http://127.0.0.1:30300;' /etc/nginx/conf.d/xray.conf
-sed -i '$ iproxy_http_version 1.1;' /etc/nginx/conf.d/xray.conf
-sed -i '$ iproxy_set_header X-Real-IP \$remote_addr;' /etc/nginx/conf.d/xray.conf
-sed -i '$ iproxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;' /etc/nginx/conf.d/xray.conf
-sed -i '$ iproxy_set_header Upgrade \$http_upgrade;' /etc/nginx/conf.d/xray.conf
-sed -i '$ iproxy_set_header Connection "upgrade";' /etc/nginx/conf.d/xray.conf
-sed -i '$ iproxy_set_header Host \$http_host;' /etc/nginx/conf.d/xray.conf
-sed -i '$ i}' /etc/nginx/conf.d/xray.conf
-
 sed -i '$ ilocation /' /etc/nginx/conf.d/xray.conf
 sed -i '$ i{' /etc/nginx/conf.d/xray.conf
 sed -i '$ iproxy_redirect off;' /etc/nginx/conf.d/xray.conf
@@ -474,15 +462,6 @@ sed -i '$ igrpc_set_header Host \$http_host;' /etc/nginx/conf.d/xray.conf
 sed -i '$ igrpc_pass grpc://127.0.0.1:33456;' /etc/nginx/conf.d/xray.conf
 sed -i '$ i}' /etc/nginx/conf.d/xray.conf
 
-sed -i '$ ilocation ^~ /ss-grpc' /etc/nginx/conf.d/xray.conf
-sed -i '$ i{' /etc/nginx/conf.d/xray.conf
-sed -i '$ iproxy_redirect off;' /etc/nginx/conf.d/xray.conf
-sed -i '$ igrpc_set_header X-Real-IP \$remote_addr;' /etc/nginx/conf.d/xray.conf
-sed -i '$ igrpc_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;' /etc/nginx/conf.d/xray.conf
-sed -i '$ igrpc_set_header Host \$http_host;' /etc/nginx/conf.d/xray.conf
-sed -i '$ igrpc_pass grpc://127.0.0.1:30310;' /etc/nginx/conf.d/xray.conf
-sed -i '$ i}' /etc/nginx/conf.d/xray.conf
-
 echo -e "$yell[SERVICE]$NC Restart All service"
 systemctl daemon-reload
 sleep 0.5
@@ -497,30 +476,15 @@ systemctl restart runn
 cd /usr/bin/
 # vmess
 wget -O add-ws "https://codeberg.org/babayega/vpsscript/raw/branch/main/xray/add-ws.sh" && chmod +x add-ws
-wget -O trialvmess "https://codeberg.org/babayega/vpsscript/raw/branch/main/xray/trialvmess.sh" && chmod +x trialvmess
-wget -O renew-ws "https://codeberg.org/babayega/vpsscript/raw/branch/main/xray/renew-ws.sh" && chmod +x renew-ws
 wget -O del-ws "https://codeberg.org/babayega/vpsscript/raw/branch/main/xray/del-ws.sh" && chmod +x del-ws
-wget -O cek-ws "https://codeberg.org/babayega/vpsscript/raw/branch/main/xray/cek-ws.sh" && chmod +x cek-ws
 
 # vless
 wget -O add-vless "https://codeberg.org/babayega/vpsscript/raw/branch/main/xray/add-vless.sh" && chmod +x add-vless
-wget -O trialvless "https://codeberg.org/babayega/vpsscript/raw/branch/main/xray/trialvless.sh" && chmod +x trialvless
-wget -O renew-vless "https://codeberg.org/babayega/vpsscript/raw/branch/main/xray/renew-vless.sh" && chmod +x renew-vless
 wget -O del-vless "https://codeberg.org/babayega/vpsscript/raw/branch/main/xray/del-vless.sh" && chmod +x del-vless
-wget -O cek-vless "https://codeberg.org/babayega/vpsscript/raw/branch/main/xray/cek-vless.sh" && chmod +x cek-vless
 
 # trojan
 wget -O add-tr "https://codeberg.org/babayega/vpsscript/raw/branch/main/xray/add-tr.sh" && chmod +x add-tr
-wget -O trialtrojan "https://codeberg.org/babayega/vpsscript/raw/branch/main/xray/trialtrojan.sh" && chmod +x trialtrojan
 wget -O del-tr "https://codeberg.org/babayega/vpsscript/raw/branch/main/xray/del-tr.sh" && chmod +x del-tr
-wget -O renew-tr "https://codeberg.org/babayega/vpsscript/raw/branch/main/xray/renew-tr.sh" && chmod +x renew-tr
-wget -O cek-tr "https://codeberg.org/babayega/vpsscript/raw/branch/main/xray/cek-tr.sh" && chmod +x cek-tr
-
-# shadowsocks
-wget -O add-ssws "https://codeberg.org/babayega/vpsscript/raw/branch/main/xray/add-ssws.sh" && chmod +x add-ssws
-wget -O trialssws "https://codeberg.org/babayega/vpsscript/raw/branch/main/xray/trialssws.sh" && chmod +x trialssws
-wget -O del-ssws "https://codeberg.org/babayega/vpsscript/raw/branch/main/xray/del-ssws.sh" && chmod +x del-ssws
-wget -O renew-ssws "https://codeberg.org/babayega/vpsscript/raw/branch/main/xray/renew-ssws.sh" && chmod +x renew-ssws
 
 
 sleep 0.5
