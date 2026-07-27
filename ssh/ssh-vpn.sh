@@ -326,24 +326,13 @@ wget -O m-vmess "https://codeberg.org/babayega/vpsscript/raw/branch/main/menu/m-
 wget -O m-vless "https://codeberg.org/babayega/vpsscript/raw/branch/main/menu/m-vless.sh"
 wget -O running "https://codeberg.org/babayega/vpsscript/raw/branch/main/menu/running.sh"
 wget -O clearcache "https://codeberg.org/babayega/vpsscript/raw/branch/main/menu/clearcache.sh"
-wget -O m-ssws "https://codeberg.org/babayega/vpsscript/raw/branch/main/menu/m-ssws.sh"
 wget -O m-trojan "https://codeberg.org/babayega/vpsscript/raw/branch/main/menu/m-trojan.sh"
 
 # menu ssh ovpn
 wget -O m-sshovpn "https://codeberg.org/babayega/vpsscript/raw/branch/main/menu/m-sshovpn.sh"
 wget -O usernew "https://codeberg.org/babayega/vpsscript/raw/branch/main/ssh/usernew.sh"
-wget -O trial "https://codeberg.org/babayega/vpsscript/raw/branch/main/ssh/trial.sh"
-wget -O renew "https://codeberg.org/babayega/vpsscript/raw/branch/main/ssh/renew.sh"
-wget -O hapus "https://codeberg.org/babayega/vpsscript/raw/branch/main/ssh/hapus.sh"
-wget -O cek "https://codeberg.org/babayega/vpsscript/raw/branch/main/ssh/cek.sh"
-wget -O member "https://codeberg.org/babayega/vpsscript/raw/branch/main/ssh/member.sh"
 wget -O delete "https://codeberg.org/babayega/vpsscript/raw/branch/main/ssh/delete.sh"
-wget -O autokill "https://codeberg.org/babayega/vpsscript/raw/branch/main/ssh/autokill.sh"
-wget -O ceklim "https://codeberg.org/babayega/vpsscript/raw/branch/main/ssh/ceklim.sh"
-wget -O tendang "https://codeberg.org/babayega/vpsscript/raw/branch/main/ssh/tendang.sh"
 wget -O sshws "https://codeberg.org/babayega/vpsscript/raw/branch/main/ssh/sshws.sh"
-wget -O user-lock "https://codeberg.org/babayega/vpsscript/raw/branch/main/ssh/user-lock.sh"
-wget -O user-unlock "https://codeberg.org/babayega/vpsscript/raw/branch/main/ssh/user-unlock.sh"
 
 # menu system
 wget -O m-system "https://codeberg.org/babayega/vpsscript/raw/branch/main/menu/m-system.sh"
@@ -364,23 +353,12 @@ chmod +x m-vmess
 chmod +x m-vless
 chmod +x running
 chmod +x clearcache
-chmod +x m-ssws
 chmod +x m-trojan
 
 chmod +x m-sshovpn
 chmod +x usernew
-chmod +x trial
-chmod +x renew
-chmod +x hapus
-chmod +x cek
-chmod +x member
 chmod +x delete
-chmod +x autokill
-chmod +x ceklim
-chmod +x tendang
 chmod +x sshws
-chmod +x user-lock
-chmod +x user-unlock
 
 chmod +x m-system
 chmod +x m-domain
